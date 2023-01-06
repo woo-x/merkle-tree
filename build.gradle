@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation 'com.google.protobuf:protobuf-java:3.21.9'
+    implementation 'com.google.guava:guava:31.1-jre'
+    implementation("org.apache.commons:commons-lang3:3.11")
+//    implementation('commons-codec:commons-codec:jar:1.15')
+    implementation 'commons-codec:commons-codec:1.15'
+    implementation 'commons-io:commons-io:2.7'
+
+
+}
+
+test {
+    useJUnitPlatform()
+}

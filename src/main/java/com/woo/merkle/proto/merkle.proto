@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package merkle;
+
+option java_multiple_files = true;
+option java_package = "com.woo.merkle.proto";
+option java_outer_classname = "Merkle";
+
+message MerkleNode {
+  optional bytes hash = 1;
+  optional bytes left= 2; // hash of left merkle node
+  optional bytes right = 3;
+  optional bytes parent = 4;
+  MerkleBalanceVector balance = 5;
+}
+
+message MerkleBalanceVector {
+  repeated int32 index = 1;   // make sure index is ascending order, so that hash always is the same
+  repeated string balances = 2;
+  optional int32 leafIdnex = 3;
+}
+
+message UserHash {
+    int64 uid = 1;
+    string nonce = 2;
+    int64 timestamp = 3;
+}
+
+message MerkleTree {
+  repeated string tokens = 1; // token and its index
+  repeated MerkleNode nodes = 2;
+}
