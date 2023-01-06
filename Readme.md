@@ -1,4 +1,4 @@
-# The merkle tree validate sample code
+# WOO X merkle tree validation sample code
 
 The sample code demonstrate how to validate the merkle tree. The sample code is written in Java,
 it consists of only 1 java file `MerkleCheck.java`. 
