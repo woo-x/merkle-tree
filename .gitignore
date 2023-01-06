@@ -1,0 +1,71 @@
+######################
+# Intellij
+######################
+.idea/
+*.iml
+*.iws
+*.ipr
+*.ids
+*.orig
+
+######################
+# Mac OSX
+######################
+.DS_Store
+.svn
+._*
+.Spotlight-V100
+.Trashes
+
+######################
+# Logs
+######################
+*.log
+*.log.gz
+*.tmp
+
+######################
+# Project Specific
+######################
+*build/
+*out/
+*classes/
+
+######################
+# Gradle
+######################
+.gradle/
+
+######################
+# Flyway Files
+######################
+flyway/jars/*.jar
+
+######################
+# Others
+######################
+*.class
+*.*~
+*~
+.merge_file*
+
+######################
+# Gradle Wrapper
+######################
+!gradle/wrapper/gradle-wrapper.jar
+
+
+######################
+# Eclipse
+######################
+bin/
+.settings/
+.project
+.classpath
+/.idea/
+
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
