@@ -69,17 +69,17 @@ The `index` attribute is a list of tokens. We can find the mapping for the token
 
 The calculation process of leaf node hash is as follows:
 
-    MerkleBalanceVector merkleBalanceVector = build(); // construct the MerkleBalanceVector message.
+    MerkleBalanceVector merkleBalanceVector = build();             // construct the MerkleBalanceVector message.
     byte[] bytes = merkleBalanceVector.serialized().toByteArray(); // serialized bytes of the message.
-    byte[] userHash = doGetUserHash() // user hash.
-    byte[] hashOfLeaf = sha256(concat(userHash, bytes)); // hash of leaf node.
+    byte[] userHash = doGetUserHash()                              // user hash.
+    byte[] hashOfLeaf = sha256(concat(userHash, bytes));           // hash of leaf node.
 
-And finally, the `userHash` uses ProtoBuffuer message like this:
+And finally, the `userHash` uses ProtoBuffer message like this:
 
     message UserHash {
-        int64 uid = 1;    
-        string nonce = 2;    
-        int64 timestamp = 3;
+        int64 uid = 1;       // UID of the account
+        string nonce = 2;    // application-id of the account
+        int64 timestamp = 3; // timestamp of the audit in Unix epoch milliseconds
     }
 
     UserHash userHash = build(); // build user hash message.
